@@ -9,6 +9,7 @@ sudo getent group adm || sudo groupadd adm
 sudo getent group audio || sudo groupadd audio
 sudo useradd -m Marian -g zarzad -G adm,audio -s /bin/bash
 
+#https://askubuntu.com/questions/668129/password-does-not-work-with-useradd-p
 # Zweryfikowanie czy Marian jest w grupach
 groups Marian
 

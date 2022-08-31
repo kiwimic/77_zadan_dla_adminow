@@ -1,0 +1,8 @@
+# Stwórz usera z jakimś losowym hasłem
+# sudo useradd -m temp_user -s /bin/bash
+# passwd temp_user
+
+echo 'temp_user:12345678' | sudo chpasswd
+
+# Na koniec usun usera
+# sudo userdel -f temp_user
