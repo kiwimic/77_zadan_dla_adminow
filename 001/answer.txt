@@ -7,7 +7,7 @@
 sudo getent group zarzad || sudo groupadd zarzad
 sudo getent group adm || sudo groupadd adm
 sudo getent group audio || sudo groupadd audio
-sudo useradd -m Marian -p 12345 -g zarzad -G adm,audio -s /bin/bash
+sudo useradd -m Marian -g zarzad -G adm,audio -s /bin/bash
 
 # Zweryfikowanie czy Marian jest w grupach
 groups Marian
