@@ -1,0 +1,19 @@
+#Zadania:
+#Załóż jednym poleceniem (nie interaktywnie!) użytkownika o nazwie ‘Marian’. Spraw, aby jego główną grupą użytkownika 
+#była ‘zarzad‘, a grupy pomocnicze to ‘adm’ oraz ‘audio’. Marian ma mieć powłokę ustawioną na /bin/sh.
+#Podpowiedź: man useradd
+
+
+sudo getent group zarzad || sudo groupadd zarzad
+sudo getent group adm || sudo groupadd adm
+sudo getent group audio || sudo groupadd audio
+sudo useradd -m Marian -p 12345 -g zarzad -G adm,audio -s /bin/bash
+
+# Zweryfikowanie czy Marian jest w grupach
+groups Marian
+
+# Po wszystkim usun uzytkownika i grupy
+#sudo userdel Marian
+#groupdel zarzad
+#groupdel adm
+#groupdel audio
